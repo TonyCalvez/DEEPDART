@@ -69,9 +69,11 @@ Download link : https://developer.nvidia.com/embedded/downloads#/search=tensorfl
 
 Documentations : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 
-Installation : 
+**Installation :** 
 
 Download package : [tf_gpu-1.14.0+nv19.7-py3](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.7-cp36-cp36m-linux_aarch64.whl)
+
+
 
 
 
