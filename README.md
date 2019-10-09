@@ -1,4 +1,4 @@
-                  # DEEPDART - Tony CALVEZ 
+# DEEPDART 
 
 ## JETSON TX2 - DEVELOPER KIT
 
@@ -6,13 +6,13 @@
 
 #### SDK Manager Software
 
-![](/home/tonycalvez/Documents/GitHub/DEEPDART/IMG/screensdkmanager.png)
+![](IMG/screensdkmanager.png)
 
 #### SDK Manager : Not supported on ubuntu1904
 
-To support the NVIDIA Software, you need to change the environment variable.
+To support the NVIDIA Software, you need to change the environment variable in the directory : `/etc/` 
 
-WARNING : You need to save : `os-release` and `lsb-release`.
+WARNING : You need to save et restore at the end of this tips the files: `os-release` and `lsb-release`.
 
 Configuration File : 
 
