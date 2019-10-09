@@ -4,15 +4,30 @@
 
 ### INSTALLATION JETPACK 3.3
 
-#### SDK Manager Software
+#### SDK Manager Software :
 
 ![](IMG/screensdkmanager.png)
 
-#### SDK Manager : Not supported on ubuntu1904
+You need to follow this different step to install :
+
+- The Operating System : JetPack (last release) with the Ubuntu Linux Kernel with an architecture for AARCH64.
+
+  - Flashing the OS with USB cable and the Recovery Mode :
+    - Plug the USB cable from the host to the micro-USB
+    - Plug the power cable
+    - Start the Jetson Developer Kit with the button POWERBIN and click on the button REC simultaneously during 2 secs
+
+- The programs and libraries on the host (Error : unavailable for my Linux 19.04)
+
+- The programs and libraries on the Jetson TX2 
+
+  
+
+#### SDK Manager : Not supported on ubuntu1904 :
 
 To support the NVIDIA Software, you need to change the environment variable in the directory : `/etc/` 
 
-WARNING : You need to save et restore at the end of this tips the files: `os-release` and `lsb-release`.
+**WARNING** : You need to save now et restore it at the end of this files: `os-release` and `lsb-release`.
 
 Configuration File : 
 
@@ -42,17 +57,21 @@ DISTRIB_CODENAME=bionic
 DISTRIB_DESCRIPTION="Ubuntu 18.04 LTS"
 ```
 
+Restart your software !
 
 
 
-
-
-
-### INSTALLATION DES BIBLIOTHEQUES POUR LE GGPU TEGRA X2 
+### LIBRARIES POUR LE GGPU TEGRA X2 
 
 Download link : https://developer.nvidia.com/embedded/downloads#/search=tensorflow
 
 #### TensorFlow for JetPack : 
 
 Documentations : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
+
+Installation : 
+
+Download package : [tf_gpu-1.14.0+nv19.7-py3](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.7-cp36-cp36m-linux_aarch64.whl)
+
+
 
