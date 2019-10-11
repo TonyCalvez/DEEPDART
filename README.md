@@ -17,7 +17,7 @@ You need to follow this different step to install :
     - Plug the power cable
     - Start the Jetson Developer Kit with the button POWERBIN and click on the button REC simultaneously during 2 secs
 
-- The programs and libraries on the host (Error : unavailable for my Linux 19.04)
+- The programs and libraries on the host (Error : unavailable for my Ubuntu 19.04)
 
 - The programs and libraries on the Jetson TX2 
 
@@ -57,9 +57,20 @@ DISTRIB_CODENAME=bionic
 DISTRIB_DESCRIPTION="Ubuntu 18.04 LTS"
 ```
 
-Restart your software !
+Restart your software and download !
 
+-----------------------------------------------------------------------------------------
 
+### CHECK THIS INSTALLATION AND THE SAMPLES ON THE JETPACK TX2
+
+You can start improve the NVIDIA Softwares with CUDA and VisionWorks with their repositories :
+
+- Cuda
+- VisionWorks
+
+This is a very good tutorial : https://www.youtube.com/watch?v=KROP46Wte4Q
+
+---------------------------------
 
 ### LIBRARIES POUR LE GGPU TEGRA X2 
 
@@ -71,7 +82,23 @@ Documentations : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jets
 
 **Installation :** 
 
-Download package : [tf_gpu-1.14.0+nv19.7-py3](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.7-cp36-cp36m-linux_aarch64.whl)
+This TensorFlow have been compiled for the Jetson TX2 (aarch64) and the CUDA's Driver V10.0 only.
+
+Official package (old version): [tf_gpu-1.14.0+nv19.7-py3](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.7-cp36-cp36m-linux_aarch64.whl)
+
+Newest version homebrew compilation : https://github.com/peterlee0127/tensorflow-nvJetson/releases
+
+
+
+#### Camera for JetPack : 
+
+You need to download the Multimedia Drivers with the JetPack Software.
+
+```bash
+gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
+```
+
+
 
 
 
