@@ -88,8 +88,6 @@ Official package (old version): [tf_gpu-1.14.0+nv19.7-py3](https://developer.dow
 
 Newest version homebrew compilation : https://github.com/peterlee0127/tensorflow-nvJetson/releases
 
-
-
 #### Camera for JetPack : 
 
 You need to download the Multimedia Drivers with the JetPack Software.
