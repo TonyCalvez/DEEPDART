@@ -109,7 +109,7 @@ gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2
 
 ### THE SSH POWER WITHOUT ANY PROBLEEEEM (OF IP)
 
-The JetPack OS contains an virtual network card in USB.
+The JetPack OS contains an virtual network card in USB. 
 
 You can plug your computer and the TX2 with USB and start a SSH :
 
@@ -118,6 +118,8 @@ ssh nvidia@192.168.55.1
 ```
 
 ![](IMG/SSH.png)
+
+If the partition L4T-README have been monted with your computer, you can follow this instruction. Else you need to reboot your computer.
 
 ### PYCHARM PROFESSIONAL 
 
