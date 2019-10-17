@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+
 # DEEPDART
 Buggies with Embedded AI
 =======
@@ -122,8 +123,13 @@ ssh nvidia@192.168.55.1
 
 I don't have any benefits to recommend the professional release of PyCharm. [But if you're student, you have a free access to this version.](https://www.jetbrains.com/community/education/)
 
-With this release, you can remote your work with the SSH. Let's start!
+With this release, you can remote your work with the SSH. LET'S START!!
 
+![](IMG/PYCHARM2.png)
 
+![](IMG/PYCHARM3.png)
 
->>>>>>> Stashed changes
+![](IMG/PYCHARM4.png)
+
+![](IMG/PYCHARM5.png)
+
