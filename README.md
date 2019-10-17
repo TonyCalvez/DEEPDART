@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-
-# DEEPDART
-Buggies with Embedded AI
-=======
 # DEEPDART 
 
 ## JETSON TX2 - DEVELOPER KIT
