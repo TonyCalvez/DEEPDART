@@ -59,7 +59,6 @@ DISTRIB_DESCRIPTION="Ubuntu 18.04 LTS"
 
 Restart your software and download !
 
-
 -----------------------------------------------------------------------------------------
 
 ### CHECK THIS INSTALLATION AND THE SAMPLES ON THE JETPACK TX2
@@ -70,7 +69,6 @@ You can start improve the NVIDIA Softwares with CUDA and VisionWorks with their 
 - VisionWorks
 
 This is a very good tutorial : https://www.youtube.com/watch?v=KROP46Wte4Q
-
 
 ------------------------
 
@@ -128,6 +126,12 @@ With this release, you can remote your work with the SSH. LET'S START!!
 
 ![](IMG/PYCHARM4.png)
 
-![](IMG/PYCHARM5.png)
+Directly in the main menu in Pycharm : 
 
+Go to File -> Settings -> Build, Execution, Deployment -> Deployment, and change deployment path on the Mappings tab.
 
+![](IMG/PYCHARM6.png)
+
+Make sure that the recent edition of your code is deployed on the server. You can always deploy your code from Tools -> Deployment -> Upload to ..., or by using Ctrl + Shift + Alt + x.
+
+![](IMG/PYCHARM7.png)
