@@ -59,7 +59,6 @@ DISTRIB_DESCRIPTION="Ubuntu 18.04 LTS"
 
 Restart your software and download !
 
-
 -----------------------------------------------------------------------------------------
 
 ### CHECK THIS INSTALLATION AND THE SAMPLES ON THE JETPACK TX2
@@ -70,7 +69,6 @@ You can start improve the NVIDIA Softwares with CUDA and VisionWorks with their 
 - VisionWorks
 
 This is a very good tutorial : https://www.youtube.com/watch?v=KROP46Wte4Q
-
 
 ------------------------
 
@@ -86,9 +84,18 @@ Documentations : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jets
 
 This TensorFlow have been compiled for the Jetson TX2 (aarch64) and the CUDA's Driver V10.0 only.
 
-Official package (old version): [tf_gpu-1.14.0+nv19.7-py3](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.7-cp36-cp36m-linux_aarch64.whl)
+Official package : [tensorflow_gpu-1.14.0+nv19.9-cp36-cp36m-linux_aarch64.whl](https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.14.0+nv19.9-cp36-cp36m-linux_aarch64.whl) 
 
-Newest version homebrew aarch64 compilation : https://github.com/lhelontra/tensorflow-on-arm/releases
+-- The homebrew compilation for TensorFlow 2.0 isn't stable.
+
+After test, I think the best is uninstall the package in JetPack OS and download the latest release : 1.14:
+
+```
+pip3 uninstall tensorflow
+pip3 install tensorflow_gpu-1.14.0+nv19.9-cp36-cp36m-linux_aarch64.whl
+```
+
+
 
 #### Camera for JetPack : 
 
@@ -128,6 +135,13 @@ With this release, you can remote your work with the SSH. LET'S START!!
 
 ![](IMG/PYCHARM4.png)
 
-![](IMG/PYCHARM5.png)
+Directly in the main menu in Pycharm : 
 
+Go to File -> Settings -> Build, Execution, Deployment -> Deployment, and change deployment path on the Mappings tab.
+
+![](IMG/PYCHARM6.png)
+
+Make sure that the recent edition of your code is deployed on the server. You can always deploy your code from Tools -> Deployment -> Upload to ..., or by using Ctrl + Shift + Alt + x.
+
+![](IMG/PYCHARM7.png)
 
