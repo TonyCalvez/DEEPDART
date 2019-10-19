@@ -16,9 +16,8 @@ def edge_filtering(img):
     bilateral_images = cv2.Canny(gray_filtered, 60, 120)
     return bilateral_images
 
-
 def masking_top_screen(img, monitor):
-    vertices = numpy.array([[0, monitor["height"]], [0, monitor["height"]/2], [monitor["width"]/3, monitor["height"]/3], [2*monitor["width"]/3, monitor["height"]/3], [monitor["width"], monitor["height"]/2], [monitor["width"], monitor["height"]],
+    vertices = numpy.array([[0, monitor["height"]], [0, monitor["height"]/2], [monitor["width"]/3, monitor["height"]/3], [2*monitor["width"]/3, monitor["height"]/3], [monitor["width"], monitor["height"]/2], [monitor["width"], monitor["height"], ],
                             ], numpy.int32)
     mask = numpy.zeros_like(img)
     # fill the mask
@@ -26,6 +25,20 @@ def masking_top_screen(img, monitor):
     # now only show the area that is the mask
     masked = cv2.bitwise_and(img, mask)
     return masked
+
+def Ylines(img):
+    graysrc = cv2.GaussianBlur(img, (3, 3), 0)
+    grady = cv2.Sobel(graysrc, cv2.CV_16S, 0, 1, ksize=3, scale=1, delta=0)
+    grady = cv2.convertScaleAbs(grady)
+    return grady
+
+def tracing_the_road(img):
+    lines = cv2.HoughLinesP(img, 1, numpy.pi/180, 50, maxLineGap=50)
+    if lines is not None:
+        for line in lines:
+            x1, y1, x2, y2 = line[0]
+            cv2.line(img, (x1, y1), (x2, y2), (0, 255, 0), 5)
+    return img
 
 
 with mss.mss() as sct:
@@ -43,6 +56,8 @@ with mss.mss() as sct:
 
         img = edge_filtering(img)
         img = masking_top_screen(img, monitor)
+        img = Ylines(img)
+        # img = tracing_the_road(img)
         cv2.imshow('DEEPDART Visual', img)
 
         # print("fps: {}".format(1 / (time.time() - last_time)))
