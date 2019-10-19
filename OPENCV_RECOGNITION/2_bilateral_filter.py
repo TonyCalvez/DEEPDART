@@ -15,11 +15,19 @@ with mss.mss() as sct:
         img = numpy.array(sct.grab(monitor))
 
         # Display the picture
-        cv2.imshow("OpenCV/Numpy normal", img)
+        # cv2.imshow("OpenCV/Numpy normal", img)
 
-        # Display the picture in grayscale
-        cv2.imshow('OpenCV/Numpy grayscale',
-                   cv2.cvtColor(img, cv2.COLOR_BGRA2GRAY))
+        # Converting the image to grayscale.
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # Smoothing without removing edges.
+        gray_filtered = cv2.bilateralFilter(gray, 7, 50, 50)
+
+        # Applying the canny filter
+        edges = cv2.Canny(gray, 60, 120)
+        bilateral_images = cv2.Canny(gray_filtered, 60, 120)
+        
+        cv2.imshow('OpenCV/Numpy grayscale', bilateral_images)
 
         print("fps: {}".format(1 / (time.time() - last_time)))
 
