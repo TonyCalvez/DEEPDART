@@ -1,5 +1,7 @@
 # DEEPDART 
 
+Contest : www.hackster.io/contests/NVIDIA
+
 ## JETSON TX2 - DEVELOPER KIT
 
 ### INSTALLATION JETPACK 3.3
