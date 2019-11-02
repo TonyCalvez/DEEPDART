@@ -12,10 +12,10 @@ def median_color(img, kernel):
 def segmentation_color(img):
     hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
     # COLORPICKER = [105   8 192] [ 95  -2 152] [115  18 232]
-    floor_low = numpy.array([75, 0, 145])
-    floor_high = numpy.array([125, 25, 255])
+    floor_low = numpy.array([60, 0, 145])
+    floor_high = numpy.array([130, 40, 255])
     curr_mask = cv2.inRange(hsv_img, floor_low, floor_high)
-    hsv_img[curr_mask > 0] = ([0, 0, 0])
+    hsv_img[curr_mask > 0] = ([0, 0, 255])
     img = cv2.cvtColor(hsv_img, cv2.COLOR_HSV2RGB)
     return img
 
@@ -26,15 +26,24 @@ def gray_converting(img):
 
 
 def thresholding_white_black(img):
-    # ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
-    ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
+    ret, thresh = cv2.threshold(img, 200, 255, cv2.THRESH_BINARY)
+    # ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
     return thresh
 
 
-def edge_filtering(img, img_src):
-    img, contours, hierarchy = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(img, contours, -1, (0, 255, 0), 3)
+def drawing_contours(img, img_src):
+    im2, contours, hierarchy = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for contour in contours:
+        cv2.drawContours(img_src, contour, -1, (0, 255, 0), 3)
     return img, img_src
+
+def edge_filtering(img):
+    # Smoothing without removing edges.
+    bilateral_images = cv2.bilateralFilter(img, 7, 50, 50)
+
+    # Applying the canny filter
+    canny_images = cv2.Canny(bilateral_images, 60, 120)
+    return canny_images
 
 
 def masking_top_screen(img, monitor):
@@ -51,30 +60,16 @@ def masking_top_screen(img, monitor):
     return masked
 
 
-def underlining(img):
-    cdst = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-    cdstP = numpy.copy(cdst)
-    lines = cv2.HoughLines(img, 1, numpy.pi / 180, 150, None, 0, 0)
+def underlining(img, img_src, monitor):
+    edges = cv2.Canny(img, 75, 150)
 
+    lines = cv2.HoughLinesP(edges, 1, numpy.pi/180, 25, maxLineGap=255)
     if lines is not None:
-        for i in range(0, len(lines)):
-            rho = lines[i][0][0]
-            theta = lines[i][0][1]
-            a = numpy.cos(theta)
-            b = numpy.sin(theta)
-            x0 = a * rho
-            y0 = b * rho
-            pt1 = (int(x0 + 1000 * (-b)), int(y0 + 1000 * (a)))
-            pt2 = (int(x0 - 1000 * (-b)), int(y0 - 1000 * (a)))
-            cv2.line(cdst, pt1, pt2, (0, 0, 255), 3, cv2.LINE_AA)
-
-    linesP = cv2.HoughLinesP(img, 1, numpy.pi / 180, 50, None, 50, 10)
-
-    if linesP is not None:
-        for i in range(0, len(linesP)):
-            l = linesP[i][0]
-            cv2.line(cdstP, (l[0], l[1]), (l[2], l[3]), (0, 0, 255), 3, cv2.LINE_AA)
-    return cdstP
+        for line in lines:
+            x1, y1, x2, y2 = line[0]
+            if x1 < monitor["width"]/8 or x1 > monitor["width"] - monitor["width"]/8:
+                cv2.line(img_src, (x1, y1), (x2, y2), (0, 255, 0), 10)
+    return img_src
 
 
 with mss.mss() as sct:
@@ -90,13 +85,14 @@ with mss.mss() as sct:
         # cv2.imshow("OpenCV/Numpy normal", img)
 
         img = segmentation_color(img_src)
+        img = median_color(img, 25)
         img = gray_converting(img)
-        img = median_color(img, 13)
-        img = thresholding_white_black(img)
         img = masking_top_screen(img, monitor)
-        img, img_src = edge_filtering(img, img_src)
+        img = thresholding_white_black(img)
+        img = edge_filtering(img)
+        img = underlining(img, img_src, monitor)
 
-        cv2.imshow('DEEPDART Visual', img)
+        cv2.imshow('DEEPDART Visual', img_src)
 
         # print("fps: {}".format(1 / (time.time() - last_time)))
 

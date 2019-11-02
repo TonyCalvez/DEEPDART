@@ -76,9 +76,9 @@ with mss.mss() as sct:
         # Display the picture
         # cv2.imshow("OpenCV/Numpy normal", img)
         img = median_color(img)
-        #img = edge_filtering(img)
-        #img = masking_top_screen(img, monitor)
-        #img = underline(img)
+        img = edge_filtering(img)
+        img = masking_top_screen(img, monitor)
+        img = underline(img)
         cv2.imshow('DEEPDART Visual', img)
 
         # print("fps: {}".format(1 / (time.time() - last_time)))
