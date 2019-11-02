@@ -3,24 +3,38 @@ import cv2
 import mss
 import numpy
 
-def median_color(img):
-    median = cv2.medianBlur(img, 49)
 
+def median_color(img, kernel):
+    median = cv2.medianBlur(img, kernel)
     return median
 
 
-def edge_filtering(img):
-    # Converting the image to grayscale.
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+def segmentation_color(img):
+    hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    # COLORPICKER = [105   8 192] [ 95  -2 152] [115  18 232]
+    floor_low = numpy.array([75, 0, 145])
+    floor_high = numpy.array([125, 25, 255])
+    curr_mask = cv2.inRange(hsv_img, floor_low, floor_high)
+    hsv_img[curr_mask > 0] = ([0, 0, 0])
+    img = cv2.cvtColor(hsv_img, cv2.COLOR_HSV2RGB)
+    return img
 
-    # Smoothing without removing edges.
-    gray_filtered = cv2.bilateralFilter(gray, 7, 50, 50)
 
-    # Applying the canny filter
-    bilateral_images = cv2.Canny(gray_filtered, 60, 120)
+def gray_converting(img):
+    img_gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    return img_gray
 
-    img_gauss = cv2.GaussianBlur(bilateral_images, (9, 9), 0)
-    return img_gauss
+
+def thresholding_white_black(img):
+    # ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
+    ret, thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
+    return thresh
+
+
+def edge_filtering(img, img_src):
+    img, contours, hierarchy = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    cv2.drawContours(img, contours, -1, (0, 255, 0), 3)
+    return img, img_src
 
 
 def masking_top_screen(img, monitor):
@@ -37,7 +51,7 @@ def masking_top_screen(img, monitor):
     return masked
 
 
-def underline(img):
+def underlining(img):
     cdst = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
     cdstP = numpy.copy(cdst)
     lines = cv2.HoughLines(img, 1, numpy.pi / 180, 150, None, 0, 0)
@@ -66,19 +80,22 @@ def underline(img):
 with mss.mss() as sct:
     # Part of the screen to capture
     monitor = {"top": 120, "left": 60, "width": 800, "height": 400}
-
     while "Screen capturing":
         last_time = time.time()
 
         # Get raw pixels from the screen, save it to a Numpy array
-        img = numpy.array(sct.grab(monitor))
+        img_src = numpy.array(sct.grab(monitor))
 
         # Display the picture
         # cv2.imshow("OpenCV/Numpy normal", img)
-        img = median_color(img)
-        #img = edge_filtering(img)
-        #img = masking_top_screen(img, monitor)
-        #img = underline(img)
+
+        img = segmentation_color(img_src)
+        img = gray_converting(img)
+        img = median_color(img, 13)
+        img = thresholding_white_black(img)
+        img = masking_top_screen(img, monitor)
+        img, img_src = edge_filtering(img, img_src)
+
         cv2.imshow('DEEPDART Visual', img)
 
         # print("fps: {}".format(1 / (time.time() - last_time)))
