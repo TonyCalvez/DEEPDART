@@ -4,7 +4,7 @@ import mss
 import numpy
 
 def median_color(img):
-    median = cv2.medianBlur(img, 7)
+    median = cv2.medianBlur(img, 49)
 
     return median
 
