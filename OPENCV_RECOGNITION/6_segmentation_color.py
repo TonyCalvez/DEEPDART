@@ -92,7 +92,7 @@ with mss.mss() as sct:
         img = edge_filtering(img)
         img = underlining(img, img_src, monitor)
 
-        cv2.imshow('DEEPDART Visual', img_src)
+        cv2.imshow('DEEPDART Visual', img)
 
         # print("fps: {}".format(1 / (time.time() - last_time)))
 
