@@ -6,15 +6,16 @@ from OPENCV_RECOGNITION.dartVisioning import dartVisioning
 
 with mss.mss() as sct:
     view = dartVisioning()
-    view.monitor = {"top": 120, "left": 60, "width": 800, "height": 400}
+    view.setMonitorSize({"top": 120, "left": 60, "width": 800, "height": 400})
 
     while "Screen capturing":
         last_time = time.time()
         img_src = numpy.array(sct.grab(view.monitor))
+        view.setFlux(img_src)
+        view.findingRoad()
+        img_src = view.getRoad()
 
-        img = view.findingRoad(img_src)
-
-        cv2.imshow("DEEPDART Visual", img)
+        cv2.imshow("DEEPDART Visual", img_src)
 
         # Press "q" to quit
         if cv2.waitKey(25) & 0xFF == ord("q"):
