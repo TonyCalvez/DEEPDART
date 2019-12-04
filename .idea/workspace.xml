@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OPENCV_RECOGNITION/dartVisioning.py" beforeDir="false" afterPath="$PROJECT_DIR$/OPENCV_RECOGNITION/dartVisioning.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +210,7 @@
       <workItem from="1573630375537" duration="244000" />
       <workItem from="1574100176830" duration="13000" />
       <workItem from="1574242788006" duration="21430000" />
+      <workItem from="1574417457760" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
