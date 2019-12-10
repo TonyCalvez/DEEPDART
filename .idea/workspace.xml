@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMG/OPENCV_8_DIRECTION.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OPENCV_RECOGNITION/dartVisioning.py" beforeDir="false" afterPath="$PROJECT_DIR$/OPENCV_RECOGNITION/dartVisioning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PRESENTATION/Présentation1.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PRESENTATION/Présentation1.pptx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +37,17 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/OPENCV_RECOGNITION" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -46,18 +58,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/NETWORK" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.test_class">
     <configuration name="colorpicker" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -180,6 +180,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -211,6 +223,8 @@
       <workItem from="1574100176830" duration="13000" />
       <workItem from="1574242788006" duration="21430000" />
       <workItem from="1574417457760" duration="46000" />
+      <workItem from="1575993946874" duration="1124000" />
+      <workItem from="1576002368016" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
@@ -258,18 +272,36 @@
     <MESSAGE value="opencv_ok" />
     <option name="LAST_COMMIT_MESSAGE" value="opencv_ok" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1019" height="274" key="GridCell.Tab.0.bottom" timestamp="1575995070667">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state width="1019" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1575995070667" />
+    <state width="1019" height="274" key="GridCell.Tab.0.center" timestamp="1575995070664">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state width="1019" height="274" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1575995070664" />
+    <state width="1019" height="274" key="GridCell.Tab.0.left" timestamp="1575995070663">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state width="1019" height="274" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1575995070663" />
+    <state width="1019" height="274" key="GridCell.Tab.0.right" timestamp="1575995070666">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state width="1019" height="274" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1575995070666" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DEEPDART$test_class.coverage" NAME="test_class Coverage Results" MODIFIED="1574268555095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$6_underline.coverage" NAME="6_underline Coverage Results" MODIFIED="1573035442713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$colorpicker.coverage" NAME="colorpicker Coverage Results" MODIFIED="1574268282223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TEST_CONFIG" />
-    <SUITE FILE_PATH="coverage/DEEPDART$dartVisioning.coverage" NAME="dartVisioning Coverage Results" MODIFIED="1574258133684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
     <SUITE FILE_PATH="coverage/DEEPDART$robot_test.coverage" NAME="robot_test Coverage Results" MODIFIED="1574266821648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SIMULATION" />
     <SUITE FILE_PATH="coverage/DEEPDART$4_underline.coverage" NAME="4_underline Coverage Results" MODIFIED="1572615656548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$4_Ylines.coverage" NAME="4_Ylines Coverage Results" MODIFIED="1571735506807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$sonar_filter.coverage" NAME="sonar_filter Coverage Results" MODIFIED="1574258259621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SIMULATION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$5_medianfiltercolor.coverage" NAME="5_medianfiltercolor Coverage Results" MODIFIED="1572711745447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
-    <SUITE FILE_PATH="coverage/DEEPDART$visioning_class.coverage" NAME="visioning_class Coverage Results" MODIFIED="1573408540525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
     <SUITE FILE_PATH="coverage/DEEPDART$odometer.coverage" NAME="odometer Coverage Results" MODIFIED="1573409225093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SIMULATION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$sonar_filter.coverage" NAME="sonar_filter Coverage Results" MODIFIED="1574258259621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SIMULATION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$colorpicker.coverage" NAME="colorpicker Coverage Results" MODIFIED="1574268282223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TEST_CONFIG" />
+    <SUITE FILE_PATH="coverage/DEEPDART$5_medianfiltercolor.coverage" NAME="5_medianfiltercolor Coverage Results" MODIFIED="1572711745447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$test_class.coverage" NAME="test_class Coverage Results" MODIFIED="1575994881439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$dartVisioning.coverage" NAME="dartVisioning Coverage Results" MODIFIED="1574258133684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
     <SUITE FILE_PATH="coverage/DEEPDART$robot_mission.coverage" NAME="robot_mission Coverage Results" MODIFIED="1574257080887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SIMULATION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$visioning_class.coverage" NAME="visioning_class Coverage Results" MODIFIED="1573408540525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$6_underline.coverage" NAME="6_underline Coverage Results" MODIFIED="1573035442713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
+    <SUITE FILE_PATH="coverage/DEEPDART$4_Ylines.coverage" NAME="4_Ylines Coverage Results" MODIFIED="1571735506807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OPENCV_RECOGNITION" />
   </component>
 </project>

@@ -119,7 +119,8 @@ class dartVisioning():
         #
         # self.cap = (self.points[0][0][0], self.points[0][0][1])
         try :
-            self.cap = tuple(self.points[self.points[:, :, 1].argmin()][0])
+            # self.cap = tuple(self.points[self.points[:, :, 1].argmax()][0])
+            self.cap = tuple(numpy.mean(self.points, axis=0, dtype=int)[0])
         except IndexError:
             pass
 
@@ -138,3 +139,4 @@ class dartVisioning():
 
     def arrow(self):
         cv2.arrowedLine(self.img_src, self.center, self.cap, (0, 0, 255), 5)
+        pass
