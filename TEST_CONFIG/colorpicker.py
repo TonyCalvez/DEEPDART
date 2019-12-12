@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image_hsv = "/home/tonycalvez/GitHub/DEEPDART/IMG/TRAINING_PICS.png"   # global ;(
+image_hsv = "/home/tonycalvez/GitHub/DEEPDART/IMG/sol.png"   # global ;(
 pixel = (20,60,80) # some stupid default
 
 # mouse callback function
@@ -22,6 +22,7 @@ def main():
     global image_hsv, pixel # so we can use it in mouse callback
 
     image_src = cv2.imread(image_hsv)  # pick.py my.png
+    image_src = cv2.resize(image_src, (500, 500))
     if image_src is None:
         print ("the image read is None............")
         return

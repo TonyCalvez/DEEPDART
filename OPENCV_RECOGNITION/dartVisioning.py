@@ -1,7 +1,6 @@
 import cv2
 import numpy
 
-
 class dartVisioning():
 
     def __init__(self):
@@ -12,10 +11,15 @@ class dartVisioning():
         self.img_src = numpy.zeros(shape=[self.monitor["top"], self.monitor["left"], 3], dtype=numpy.uint8)
         self.img_cv = numpy.zeros(shape=[self.monitor["top"], self.monitor["left"], 3], dtype=numpy.uint8)
         self.points = []
+        self.HSV = [[60, 0, 145], [130, 40, 255]]
+        self.extremepoints = []
         pass
 
     def setMonitorSize(self, size):
         self.monitor = size
+
+    def setHSVColor(self, minHSV, maxHSV):
+        self.HSV = [numpy.array(minHSV), numpy.array(maxHSV)]
 
     def getRoadDev(self):
         return self.img_cv
@@ -40,10 +44,7 @@ class dartVisioning():
 
     def segmentation_color(self):
         hsv_img = cv2.cvtColor(self.img_cv, cv2.COLOR_RGB2HSV)
-        # COLORPICKER = [105   8 192] [ 95  -2 152] [115  18 232]
-        floor_low = numpy.array([60, 0, 145])
-        floor_high = numpy.array([130, 40, 255])
-        curr_mask = cv2.inRange(hsv_img, floor_low, floor_high)
+        curr_mask = cv2.inRange(hsv_img, self.HSV[0], self.HSV[1])
         hsv_img[curr_mask > 0] = ([0, 0, 255])
         self.img_cv = cv2.cvtColor(hsv_img, cv2.COLOR_HSV2RGB)
 
@@ -78,25 +79,13 @@ class dartVisioning():
         self.img_cv = cv2.Canny(self.img_cv, 60, 120)
 
     def underlining(self):
-        # edges = cv2.Canny(self.img_cv, 75, 150)
-        #
-        # lines = cv2.HoughLinesP(edges, 1, numpy.pi / 180, 25, maxLineGap=255)
-        # if lines is not None:
-        #     print(lines)
-        #     for line in lines:
-        #         x1, y1, x2, y2 = line[0]
-        #         # if round((y2 - y1) / (x2 - x1)) == 0:
-        #                 # (x1 < self.monitor["width"] / 8 or x1 > self.monitor["width"] - self.monitor["width"] / 8) or (y1 < self.monitor["height"] / 8 or y1 > self.monitor["height"] - self.monitor["height"] / 8):
-        #         self.cap = (round((x2 - x1)), round((y2 - y1)))
-        #         cv2.line(self.img_src, (x1, y1), (x2, y2), (0, 255, 0), 10)
-        #
-        #     self.cap = (0, 0)
         image, contours, hierarchy = cv2.findContours(
             image=self.img_cv,
             mode=cv2.RETR_TREE,
             method=cv2.CHAIN_APPROX_SIMPLE)
         try:
             self.points = cv2.convexHull(contours[0])
+            self.contours = contours[0]
             cv2.drawContours(self.img_src, contours=[self.points], contourIdx=-1,
                              color=(255, 0, 0), thickness=2)
         except IndexError:
@@ -114,28 +103,13 @@ class dartVisioning():
 
         except ZeroDivisionError:
             pass
-        # xmean = numpy.mean(self.points, axis=0)
-        # ymean = numpy.mean(self.points, axis=0)
-        #
-        # self.cap = (self.points[0][0][0], self.points[0][0][1])
+
         try :
-            # self.cap = tuple(self.points[self.points[:, :, 1].argmax()][0])
-            self.cap = tuple(numpy.mean(self.points, axis=0, dtype=int)[0])
+            max = numpy.amax(self.contours, axis=0)[0]
+            print(max)
+            self.cap = (400, 200)
         except IndexError:
             pass
-
-        # min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(self.img_cv, mask=self.points[0])
-        # print(max_val, max_loc)
-        # l_m = tuple(c_0[c_0[:, :, 0].argmin()][0])
-        # r_m = tuple(c_0[c_0[:, :, 0].argmax()][0])
-        # t_m = tuple(c_0[c_0[:, :, 1].argmin()][0])0
-        # b_m = tuple(c_0[c_0[:, :, 1].argmax()][0])
-        #
-        # pst = [b_m]
-        # xcor = [p[0] for p in pst]
-        # ycor = [p[1] for p in pst]
-        # self.extrem = (xcor[0], ycor[0])
-        # cv2.circle(self.img_src, self.extrem, 5, (0, 0, 255), -1)
 
     def arrow(self):
         cv2.arrowedLine(self.img_src, self.center, self.cap, (0, 0, 255), 5)
