@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RESSOURCES/ressourcedownloader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +225,7 @@
       <workItem from="1576173889915" duration="1000" />
       <workItem from="1576225823479" duration="617000" />
       <workItem from="1576231681059" duration="83000" />
-      <workItem from="1576232321198" duration="2742000" />
+      <workItem from="1576232321198" duration="3362000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
@@ -281,26 +278,26 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="743" y="282" width="501" height="491" key="FileChooserDialogImpl/0.0.1920.1048@0.0.1920.1048" timestamp="1576231762085" />
-    <state width="1874" height="250" key="GridCell.Tab.0.bottom" timestamp="1576242639297">
+    <state width="1874" height="250" key="GridCell.Tab.0.bottom" timestamp="1576244612084">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1576242639297" />
-    <state width="1874" height="250" key="GridCell.Tab.0.center" timestamp="1576242639296">
+    <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1576244612084" />
+    <state width="1874" height="250" key="GridCell.Tab.0.center" timestamp="1576244612084">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1576242639296" />
-    <state width="1874" height="250" key="GridCell.Tab.0.left" timestamp="1576242639295">
+    <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1576244612084" />
+    <state width="1874" height="250" key="GridCell.Tab.0.left" timestamp="1576244612084">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1576242639295" />
-    <state width="1874" height="250" key="GridCell.Tab.0.right" timestamp="1576242639297">
+    <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1576244612084" />
+    <state width="1874" height="250" key="GridCell.Tab.0.right" timestamp="1576244612084">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1576242639297" />
+    <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1576244612084" />
     <state width="1874" height="338" key="GridCell.Tab.1.bottom" timestamp="1576171452734">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>

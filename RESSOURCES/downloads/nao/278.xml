@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nao</folder>
+	<filename>278.jpg</filename>
+	<path>/home/tonycalvez/GitHub/DEEPDART/RESSOURCES/downloads/nao/278.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>371</width>
+		<height>136</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nao</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>22</xmin>
+			<ymin>7</ymin>
+			<xmax>223</xmax>
+			<ymax>136</ymax>
+		</bndbox>
+	</object>
+</annotation>
