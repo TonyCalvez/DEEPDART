@@ -1,26 +1,26 @@
 <annotation>
 	<folder>nao</folder>
-	<filename>180.jpg</filename>
-	<path>/home/lagrue/Documents/DEEPDART/RESSOURCES/downloads/nao/180.jpg</path>
+	<filename>167.jpg</filename>
+	<path>/home/lagrue/Documents/DEEPDART/RESSOURCES/downloads/nao/167.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>318</width>
-		<height>159</height>
+		<width>275</width>
+		<height>183</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
 		<name>nao</name>
 		<pose>Unspecified</pose>
-		<truncated>0</truncated>
+		<truncated>1</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>118</xmin>
-			<ymin>8</ymin>
-			<xmax>196</xmax>
-			<ymax>141</ymax>
+			<xmin>53</xmin>
+			<ymin>21</ymin>
+			<xmax>217</xmax>
+			<ymax>183</ymax>
 		</bndbox>
 	</object>
 </annotation>
