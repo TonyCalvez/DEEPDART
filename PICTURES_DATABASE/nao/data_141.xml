@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nao</folder>
+	<filename>data_141.jpg</filename>
+	<path>/home/lagrue/Documents/DEEPDART/RESSOURCES/downloads/nao/141.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>613</width>
+		<height>460</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nao</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>290</xmin>
+			<ymin>134</ymin>
+			<xmax>386</xmax>
+			<ymax>327</ymax>
+		</bndbox>
+	</object>
+</annotation>
