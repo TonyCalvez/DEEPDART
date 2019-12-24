@@ -107,7 +107,45 @@ You need to download the Multimedia Drivers with the JetPack Software.
 gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=0 ! 'video/x-raw,width=960, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
 ```
 
-----------------------------------
+The `nvarguscamerasrc` is a pipeline used when the camera generates images of the bayer format, because it uses the ISP to change the images to a visible format.
+
+The best solution to stream the camera with an other software is captured in v4l2src format and export in the `\dev\video2`
+
+```bash
+cd ..
+mkdir v4l2src
+cd v4l2src
+git clone https://github.com/umlaeute/v4l2loopback.git v4l2loopback
+cd v4l2loopback
+sudo su
+make
+make install 
+
+# The best tutorial : https://www.viziochron.com/xavier
+apt-get install -y v4l2loopback-dkms v4l2loopback-utils
+modprobe v4l2loopback devices=1 video_nr=2 exclusive_caps=1
+echo options v4l2loopback devices=1 video_nr=2 exclusive_caps=1 > /etc/modprobe.d/v4l2loopback.conf
+echo v4l2loopback > /etc/modules
+update-initramfs -u
+```
+
+
+
+It's good, you're ready to stream your camera with `/dev/video2` with this command line : 
+
+```bash
+gst-launch-1.0 -v nvarguscamerasrc ! 'video/x-raw(memory:NVMM), format=NV12, width=1920, height=1080, framerate=30/1' ! nvvidconv ! 'video/x-raw, width=640, height=480, format=I420, framerate=30/1' ! videoconvert ! identity drop-allocation=1 ! 'video/x-raw, width=640, height=480, format=RGB, framerate=30/1' ! v4l2sink device=/dev/video2
+```
+
+
+
+You can check your software installation with : 
+
+```bash
+gst-launch-1.0 v4l2src device=/dev/video2 ! 'video/x-raw, format=RGB, width=640, height=480, framerate=30/1' ! queue ! videoconvert ! xvimagesink
+```
+
+--------------------
 
 ## REMOTE YOUR PROJECT
 
