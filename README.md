@@ -252,6 +252,8 @@ This is the most important moment, you try with the Jetson's webcam
 
 #### Optimize / Overclock
 
+Don't forget !! The best optimization for the Jetson is NVP Model : **MAXN**.
+
 You like `top` in your ubuntu desktop? You will prefer `jtop` ! This is the best software to optimize or overclock your Jetson!
 
 You can install this software with `pip` command:
@@ -276,7 +278,7 @@ This is a very good work : https://github.com/rbonghi/jetson_stats
 
 --------------------
 
-## REMOTE YOUR PROJECT`
+## REMOTE YOUR PROJECT
 
 ### THE SSH POWER WITHOUT ANY PROBLEEEEM (OF IP)
 
