@@ -244,11 +244,39 @@ This is the most important moment, you try with the Jetson's webcam
 
   
 
+![](IMG/DARKNET_YOLO_V2.png)
+
+
+
+
+
+#### Optimize / Overclock
+
+You like `top` in your ubuntu desktop? You will prefer `jtop` ! This is the best software to optimize or overclock your Jetson!
+
+You can install this software with `pip` command:
+
+```bash
+sudo -H pip install jetson-stats
+```
+
+And the adventure will start with:
+
+````bash
+sudo jtop
+````
+
+When I enable the Jetson_clock_controller and the fan, I can increase to 28 FPS and I reduce the latency.
+
+This is a very good work : https://github.com/rbonghi/jetson_stats
+
+![](IMG/jtop.gif)
+
 
 
 --------------------
 
-## REMOTE YOUR PROJECT
+## REMOTE YOUR PROJECT`
 
 ### THE SSH POWER WITHOUT ANY PROBLEEEEM (OF IP)
 
