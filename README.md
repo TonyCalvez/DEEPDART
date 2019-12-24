@@ -99,6 +99,45 @@ pip3 install tensorflow_gpu-1.14.0+nv19.9-cp36-cp36m-linux_aarch64.whl
 
 
 
+#### OpenCV for JetPack : 
+
+This `OpenCV` will be compiled and installed with the parallelization CUDA. Moreover, you have the last released of `gstreamer-1.0` inside this package.
+
+I have changed the script of NVIDIA to optimize `gstreamer-1.0` and to compile a file for YOLO.
+
+In first step un-install the last version of OpenCV with : 
+
+```bash
+sudo find / -name "*opencv*" -exec rm -i {} \;
+```
+
+
+
+The script [BASH is available in my GitHub](https://github.com/TonyCalvez/DEEPDART/blob/master/SDK/install_opencv4.1.1_Jetson.sh) and you need 4-5 hours to compile OpenCV in the Jetson TX2.
+
+And you can check the installation with a [python script available in my GitHub](https://github.com/TonyCalvez/DEEPDART/blob/master/FILE_TEST/test_opencv_camera.py).
+
+
+
+Before start the compilation of YOLO, check if the `cMake` produces the `pkgconfig file`.
+
+Check if you find the opencv.pc inside the `pkgconfig folder`.
+
+```bash
+cd /usr/local/lib/pkgconfig/
+ls
+```
+
+
+
+If you don't find anything : 
+
+```bash
+cp /full/path/to/opencv-4.0.0/release/lib/pkgconfig/opencv.pc /usr/local/lib/pkgconfig/opencv4.pc
+```
+
+
+
 #### Camera for JetPack : 
 
 You need to download the Multimedia Drivers with the JetPack Software.
@@ -144,6 +183,68 @@ You can check your software installation with :
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video2 ! 'video/x-raw, format=RGB, width=640, height=480, framerate=30/1' ! queue ! videoconvert ! xvimagesink
 ```
+
+
+
+#### Parallelization with OpenMP for JetPack : 
+
+To execute Yolo, we need OpenMP to do a parallelization. You can increase 20 FPS to 22 FPS and reduce the latencies.
+
+```bash
+cd ..
+mkdir parallelization
+cd parallelization
+git clone https://github.com/llvm-project/openmp
+mkdir build
+cd build
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ..  # Initial configuration
+make
+sudo make install
+```
+
+
+
+### YOLO : 
+
+The best 
+
+```bash
+cd ..
+git clone https://github.com/pjreddie/darknet
+cd darknet
+make
+wget https://pjreddie.com/media/files/yolov3-tiny.weights
+```
+
+
+
+To test your installation, you can start with :
+
+```
+./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg
+```
+
+
+
+This is the most important moment, you try with the Jetson's webcam 
+
+- In first, export your camera to `/dev/video2`
+
+  ````bash
+  gst-launch-1.0 -v nvarguscamerasrc ! 'video/x-raw(memory:NVMM), format=NV12, width=1920, height=1080, framerate=30/1' ! nvvidconv ! 'video/x-raw, width=640, height=480, format=I420, framerate=30/1' ! videoconvert ! identity drop-allocation=1 ! 'video/x-raw, width=640, height=480, format=RGB, framerate=30/1' ! v4l2sink device=/dev/video2
+  ````
+
+  
+
+- Second step, enjoy!
+
+  ```bash
+  ./darknet detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights /dev/video2
+  ```
+
+  
+
+
 
 --------------------
 
