@@ -210,10 +210,10 @@ The best
 
 ```bash
 cd ..
-git clone https://github.com/pjreddie/darknet
+git clone https://github.com/pjreddie/darknet darknet
 cd darknet
-make
 wget https://pjreddie.com/media/files/yolov3-tiny.weights
+make
 ```
 
 
@@ -236,7 +236,7 @@ This is the most important moment, you try with the Jetson's webcam
 
   
 
-- Second step, enjoy!
+- Second step, enjoy with 25 FPS!
 
   ```bash
   ./darknet detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights /dev/video2
