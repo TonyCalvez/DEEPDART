@@ -1,7 +1,7 @@
-<annotation>
+<annotation verified="yes">
 	<folder>nao</folder>
-	<filename>data_7.jpg</filename>
-	<path>/home/lagrue/Documents/DEEPDART/RESSOURCES/downloads/nao/7.jpg</path>
+	<filename>nao_7.jpg</filename>
+	<path>/home/tonycalvez/GitHub/DEEPDART/PICTURES_DATABASE/nao/nao_7.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
