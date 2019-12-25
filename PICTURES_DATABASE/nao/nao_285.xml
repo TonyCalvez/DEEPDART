@@ -1,7 +1,7 @@
 <annotation>
 	<folder>nao</folder>
-	<filename>data_285.jpg</filename>
-	<path>/home/tonycalvez/GitHub/DEEPDART/RESSOURCES/downloads/nao/285.jpg</path>
+	<filename>nao_285.jpg</filename>
+	<path>/home/tonycalvez/GitHub/DEEPDART/PICTURES_DATABASE/nao/nao_285.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -90,9 +90,9 @@
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>13</xmin>
-			<ymin>129</ymin>
+			<ymin>128</ymin>
 			<xmax>101</xmax>
-			<ymax>244</ymax>
+			<ymax>243</ymax>
 		</bndbox>
 	</object>
 </annotation>
