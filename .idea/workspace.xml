@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,7 +239,7 @@
       <workItem from="1576322956689" duration="18401000" />
       <workItem from="1576350542070" duration="1797000" />
       <workItem from="1576501456384" duration="643000" />
-      <workItem from="1577272769226" duration="3100000" />
+      <workItem from="1577272769226" duration="3680000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
