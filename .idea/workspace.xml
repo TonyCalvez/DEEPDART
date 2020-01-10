@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/darknet/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/darknet" beforeDir="false" afterPath="$PROJECT_DIR$/darknet" afterDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +247,7 @@
       <workItem from="1578672916242" duration="549000" />
       <workItem from="1578674619306" duration="3039000" />
       <workItem from="1578680148596" duration="6535000" />
-      <workItem from="1578689181147" duration="778000" />
+      <workItem from="1578689181147" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
@@ -330,10 +325,10 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="686" y="329" width="617" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1048@0.0.1920.1048" timestamp="1578686667062" />
-    <state x="525" y="120" width="860" height="814" key="CommitChangelistDialog2" timestamp="1578691589832">
+    <state x="525" y="120" width="860" height="814" key="CommitChangelistDialog2" timestamp="1578692485609">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="525" y="120" width="860" height="814" key="CommitChangelistDialog2/0.0.1920.1048@0.0.1920.1048" timestamp="1578691589832" />
+    <state x="525" y="120" width="860" height="814" key="CommitChangelistDialog2/0.0.1920.1048@0.0.1920.1048" timestamp="1578692485609" />
     <state x="743" y="282" width="501" height="491" key="FileChooserDialogImpl" timestamp="1576509198268">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
