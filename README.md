@@ -250,9 +250,17 @@ This is the most important moment, you try with the Jetson's webcam
 
 ![](IMG/DARKNET_YOLO_V2.png)
 
+```bash
+./darknet detector demo  data/obj.data cfg/yolov3-tiny-ENSTA.cfg backup/yolov3-tiny-ENSTA_800.weights /dev/video2 -thresh 0.001
+```
 
+```bash
+./darknet detector test data/obj.data cfg/yolov3-tiny-ENSTA.cfg backup/yolov3-tiny-ENSTA_800.weights data/download.jpg -thresh 0.01
+```
 
-
+```bash
+./darknet detector train data/obj.data cfg/yolov3-tiny-ENSTA.cfg yolov3-tiny.conv.15
+```
 
 #### Optimize / Overclock
 
