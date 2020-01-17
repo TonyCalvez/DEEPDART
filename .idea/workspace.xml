@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230">
-      <change afterPath="$PROJECT_DIR$/SCRIPT/LINUX_FILE_SYSTEM/lsb-release1804" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/LINUX_FILE_SYSTEM/os-release1804" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/NETWORK/Proxy-ENSTA.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/colorpicker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/install_opencv4.1.1_Jetson.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/test1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/test_opencv_camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/testtensorflow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/voctoyolo.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SCRIPT/yolo_installation.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE_TEST/colorpicker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE_TEST/test1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE_TEST/test_opencv_camera.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE_TEST/testtensorflow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE_TEST/voctoyolo.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK/LINUX_FILE_SYSTEM/lsb-release1804" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK/LINUX_FILE_SYSTEM/os-release1804" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK/NETWORK/Proxy-ENSTA.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK/install_opencv4.1.1_Jetson.sh" beforeDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +251,7 @@
       <workItem from="1578927779222" duration="229000" />
       <workItem from="1579166124566" duration="3173000" />
       <workItem from="1579188486289" duration="818000" />
-      <workItem from="1579247524982" duration="21357000" />
+      <workItem from="1579247524982" duration="21963000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
@@ -359,26 +337,26 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="743" y="282" width="501" height="491" key="FileChooserDialogImpl/0.0.1920.1048@0.0.1920.1048" timestamp="1576509198268" />
-    <state width="914" height="250" key="GridCell.Tab.0.bottom" timestamp="1579268783007">
+    <state width="914" height="250" key="GridCell.Tab.0.bottom" timestamp="1579281153462">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="914" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1579268783007" />
-    <state width="914" height="250" key="GridCell.Tab.0.center" timestamp="1579268783007">
+    <state width="914" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1579281153462" />
+    <state width="914" height="250" key="GridCell.Tab.0.center" timestamp="1579281153462">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="914" height="250" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1579268783007" />
-    <state width="914" height="250" key="GridCell.Tab.0.left" timestamp="1579268783007">
+    <state width="914" height="250" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1579281153462" />
+    <state width="914" height="250" key="GridCell.Tab.0.left" timestamp="1579281153462">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="914" height="250" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1579268783007" />
-    <state width="914" height="250" key="GridCell.Tab.0.right" timestamp="1579268783007">
+    <state width="914" height="250" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1579281153462" />
+    <state width="914" height="250" key="GridCell.Tab.0.right" timestamp="1579281153462">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="914" height="250" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1579268783007" />
+    <state width="914" height="250" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1579281153462" />
     <state width="1874" height="338" key="GridCell.Tab.1.bottom" timestamp="1576171452734">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
