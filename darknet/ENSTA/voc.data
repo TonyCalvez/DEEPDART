@@ -1,0 +1,6 @@
+classes= 3
+train  = ENSTA/train.txt
+valid  = ENSTA/test.txt
+names = ENSTA/voc.names
+backup = backup
+
