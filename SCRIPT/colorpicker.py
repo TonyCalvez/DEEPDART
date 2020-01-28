@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image_hsv = "/home/tonycalvez/GitHub/DEEPDART/IMG/sol.png"   # global ;(
+image_hsv = "/home/tonycalvez/GitHub/DEEPDART/IMG/LABELIMG.png"   # global ;(
 pixel = (20,60,80) # some stupid default
 
 # mouse callback function
@@ -10,8 +10,8 @@ def pick_color(event,x,y,flags,param):
         pixel = image_hsv[y,x]
 
         #you might want to adjust the ranges(+-10, etc):
-        upper =  np.array([pixel[0] + 10, pixel[1] + 10, pixel[2] + 40])
-        lower =  np.array([pixel[0] - 10, pixel[1] - 10, pixel[2] - 40])
+        upper =  np.array([pixel[0] + 30, pixel[1] + 30, pixel[2] + 40])
+        lower =  np.array([pixel[0] - 30, pixel[1] - 30, pixel[2] - 40])
         print(pixel, lower, upper)
 
         image_mask = cv2.inRange(image_hsv,lower,upper)

@@ -123,14 +123,14 @@ class dataAugmentation:
         cv2.imwrite(save_path + '%s' % str(name_int) + '_Gamma_Augmentation.jpg', img_gamma)
         cv2.imwrite(save_path + '%s' % str(name_int) + '_Gaussian_Noisy.jpg', img_gaussian_noisy)
         cv2.imwrite(save_path + '%s' % str(name_int) + '_Pepper_Noisy.jpg', img_pepper_noisy)
-        cv2.imwrite(save_path + '%s' % str(name_int) + '_Flip.jpg', img_flip)
+        # cv2.imwrite(save_path + '%s' % str(name_int) + '_Flip.jpg', img_flip)
 
     def main(self, file_dir, output_path):
         for root, _, files in os.walk(file_dir):
             for file in files:
                 filename, file_extension = os.path.splitext(file)
 
-                if file_extension == '.jpg':
+                if file_extension == '.jpg' or file_extension == '.png' or file_extension == '.JPG':
                     raw_image = dataAugmentation(root, file)
                     raw_image.image_augment(output_path)
                 elif file_extension == '.txt':
@@ -143,23 +143,23 @@ class dataAugmentation:
                     shutil.copy2(file_dir + file, output_path + filename + '_Pepper_Noisy.txt')
                     shutil.copy2(file_dir + file, output_path + filename + '_Pepper_Noisy.txt')
 
-                    file = open(output_path + filename + '_Origin.txt', "r")
-                    bounding_boxes = []
-                    for line in file:
-                        fields = line.split(" ")
-                        fields[3] = round(abs(1 - float(fields[3])),5)
-                        fields[4] = round(abs(1 - float(fields[4])),5)
-                        bounding_boxes.append(fields[0] + " " + fields[2] + " " + fields[1] + " " + str(fields[3]) + " " + str(fields[4]))
-                    file.close()
-                    file = open(output_path + filename + '_Flip.txt', "a")
-                    for bounding_box in bounding_boxes:
-                        file.write(bounding_box + "\n")
-                    file.close()
+                    # file = open(output_path + filename + '_Origin.txt', "r")
+                    # bounding_boxes = []
+                    # for line in file:
+                    #     fields = line.split(" ")
+                    #     fields[3] = round(abs(1 - float(fields[3])),5)
+                    #     fields[4] = round(abs(1 - float(fields[4])),5)
+                    #     bounding_boxes.append(fields[0] + " " + fields[2] + " " + fields[1] + " " + str(fields[3]) + " " + str(fields[4]))
+                    # file.close()
+                    # file = open(output_path + filename + '_Flip.txt', "a")
+                    # for bounding_box in bounding_boxes:
+                    #     file.write(bounding_box + "\n")
+                    # file.close()
 
 
 if __name__ == '__main__':
-    PATH_IMAGE = "/home/tonycalvez/GitHub/DEEPDART/PICTURES_DATABASE/nao/"
-    PATH_IMAGE_GENERATE = "/home/tonycalvez/GitHub/DEEPDART/darknet/VOCdevkit/"
+    PATH_IMAGE = "/media/tonycalvez/LAURA/DATA_Theo/"
+    PATH_IMAGE_GENERATE = "/media/tonycalvez/LAURA/VOCdevkit/"
 
-    generate = dataAugmentation(PATH_IMAGE, "nao_1.jpg")
+    generate = dataAugmentation(PATH_IMAGE, "P1030217.JPG")
     generate.main(PATH_IMAGE, PATH_IMAGE_GENERATE)
