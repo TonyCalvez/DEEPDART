@@ -220,11 +220,14 @@ wget https://pjreddie.com/media/files/yolov3-tiny.weights
 make
 ```
 
-
+Learning with a Cluster :
+```bash
+run slurm script=darknet.sh -c 28 gpus=2 mem=30000
+```
 
 To test your installation, you can start with :
 
-```
+```bash
 ./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg
 ```
 
