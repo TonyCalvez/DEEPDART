@@ -1,7 +1,5 @@
 import glob, os
 
-
-
 # Current directo
 # Directory where the data will reside, relative to 'darknet.exe'
 ROOT_DIR = os.path.abspath(os.curdir)
@@ -9,14 +7,12 @@ DARKNET_DIR = ROOT_DIR + "/darknet/"
 pics_directory_darknet_relative = 'VOCdevkit/'
 file_train = open('darknet/cfg/train.txt', 'w')
 file_test = open('darknet/cfg/test.txt', 'w')
-pics_directory_darknet = "/media/tonycalvez/LAURA/VOCdevkit"
+pics_directory_darknet = "/media/tonycalvez/T_LAGRUE/IMAGE/"
 
 # Percentage of images to be used for the test set
-percentage_test = 5;
+percentage_test = 2;
 
 # Create and/or truncate train.txt and test.txt
-
-
 
 # Populate train.txt and test.txt
 counter = 1
