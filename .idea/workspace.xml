@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230">
-      <change afterPath="$PROJECT_DIR$/IMG/Screenshot from 2020-01-31 16-22-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASCALVOC_TO_YOLO/objectmapper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASCALVOC_TO_YOLO/reader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASCALVOC_TO_YOLO/transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASCALVOC_TO_YOLO/xmltotxt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PRESENTATION/Thumbs.db:encryptable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMG/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PRESENTATION/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/PRESENTATION/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_augmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_testing_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_testing_files.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +268,7 @@
       <workItem from="1581692106083" duration="26000" />
       <workItem from="1582116976690" duration="9364000" />
       <workItem from="1582186444894" duration="66000" />
-      <workItem from="1582220005075" duration="3496000" />
+      <workItem from="1582220005075" duration="4117000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
