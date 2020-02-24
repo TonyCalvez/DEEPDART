@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230" />
+    <list default="true" id="4b3105fa-7c2a-4e7c-a652-16a5aa5927c4" name="Default Changelist" comment="20200110-2230">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Recognition_Generator.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,11 +31,7 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="TonyCalvez" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="DEEPDART" />
   </component>
-  <component name="JupyterTrust" id="8c502d1f-1cc4-4a24-a0a8-7ebef314fa88">
-    <option name="files">
-      <option value="Image_Recognition_Generator.ipynb" />
-    </option>
-  </component>
+  <component name="JupyterTrust" id="8c502d1f-1cc4-4a24-a0a8-7ebef314fa88" />
   <component name="ProjectId" id="1SKwZA5vtHjPtR9T4Fyn3yVmtsr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -269,6 +268,7 @@
       <workItem from="1582116976690" duration="9364000" />
       <workItem from="1582186444894" duration="66000" />
       <workItem from="1582220005075" duration="4117000" />
+      <workItem from="1582533342442" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="20191102">
       <created>1572708586131</created>
@@ -354,26 +354,26 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="743" y="282" width="501" height="491" key="FileChooserDialogImpl/0.0.1920.1048@0.0.1920.1048" timestamp="1581692123850" />
-    <state width="1874" height="250" key="GridCell.Tab.0.bottom" timestamp="1582130131718">
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom" timestamp="1582547519433">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1582130131718" />
-    <state width="1874" height="250" key="GridCell.Tab.0.center" timestamp="1582130131717">
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1048@0.0.1920.1048" timestamp="1582547519433" />
+    <state width="1874" height="274" key="GridCell.Tab.0.center" timestamp="1582547519433">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1582130131717" />
-    <state width="1874" height="250" key="GridCell.Tab.0.left" timestamp="1582130131716">
+    <state width="1874" height="274" key="GridCell.Tab.0.center/0.0.1920.1048@0.0.1920.1048" timestamp="1582547519433" />
+    <state width="1874" height="274" key="GridCell.Tab.0.left" timestamp="1582547519432">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1582130131716" />
-    <state width="1874" height="250" key="GridCell.Tab.0.right" timestamp="1582130131717">
+    <state width="1874" height="274" key="GridCell.Tab.0.left/0.0.1920.1048@0.0.1920.1048" timestamp="1582547519432" />
+    <state width="1874" height="274" key="GridCell.Tab.0.right" timestamp="1582547519433">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048/0.0.1920.1048@0.0.1920.1048" timestamp="1576227597257" />
-    <state width="1874" height="250" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1582130131717" />
+    <state width="1874" height="274" key="GridCell.Tab.0.right/0.0.1920.1048@0.0.1920.1048" timestamp="1582547519433" />
     <state width="1874" height="338" key="GridCell.Tab.1.bottom" timestamp="1576171452734">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
