@@ -1,17 +1,15 @@
 import re
 import matplotlib.pyplot as plt
-import numpy
 
-file = open('/usr/tmp/darknet.sh.out4338', 'r')
+file = open('/home/tonycalvez/GitHub/DEEPDART/darknet1.sh.out', 'r')
 
 avgIOU = []
 totalLoss = []
 avgLossError = []
+iteration = []
 
-# Using for loop
 print("Plot Learning YOLO")
 for line in file:
-    # print("{}".format(line.strip()))
     arguments = line.split(", ")
 
     for argument in arguments:
@@ -27,7 +25,7 @@ for line in file:
             except ValueError:
                 pass
 
-        if re.match('^[\d]+\W+[\d]+[ avg]', argument) is not None:
+        if re.match('^[\d]+\W+[\d]+\W+avg', argument) is not None:
             try:
                 avgLossError.append(float(argument.split()[0]))
             except ValueError:
@@ -35,34 +33,27 @@ for line in file:
 file.close()
 
 plt.plot(avgIOU)
-plt.title('avgIOU')
-plt.xlim(left=0)
-plt.show()
-
+# plt.title('avgIOU')
+# plt.xlim(left=0)
+# plt.show()
+#
 plt.plot(totalLoss)
-plt.title('Total Loss')
-plt.xlabel("Nb Iterations")
-plt.xlim(left=0)
-plt.xlim(right=2000)
-plt.show()
-
-# # print(avgLossError)
-# plt.plot(avgLossError, color='blue', lw=2)
-# # plt.plot(0.060730)
-# plt.title('Average Loss Error')
-# plt.yscale('log')
+# plt.title('Total Loss')
 # plt.xlabel("Nb Iterations")
 # plt.xlim(left=0)
 # plt.xlim(right=2000)
 # plt.show()
+# avgLossErrorTiny = []
 
+# for i in range(0, len(avgLossError), 100):
+#     avgLossErrorTiny.append(avgLossError[i])
+#     iteration.append(i)
 
-x_min = 0
-x_max = 1000
-x = numpy.arange(0, x_max, 100)
-plt.plot(x, avgLossError)
-plt.xlim(x_min,x_max)
+plt.plot(avgLossError)
+plt.axhline(y=0.60730, color='r', linestyle='-')
+plt.title('Average Loss Error')
 plt.yscale('log')
-plt.grid(True,which="both", linestyle='--')
+plt.xlabel("Nb Iterations")
+plt.xlim(left=0)
+plt.xlim(right=10000)
 plt.show()
-
