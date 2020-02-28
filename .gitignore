@@ -5,7 +5,5 @@
 *.zip
 *.o
 *.pyc
-*.weights
-*.weight
 *.db
 *.out
